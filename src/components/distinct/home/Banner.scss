@@ -1,0 +1,31 @@
+// Import root
+@import '../../../styles/root-style.scss';
+
+.banner-container {
+	background-color: var(--bg-secondary);
+	padding: 0 0 0 60px;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+	.banner-content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 30px;
+
+		.banner-text {
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+			justify-content: center;
+		}
+
+		.banner-img {
+			display: flex;
+			justify-content: center;
+
+			img {
+				max-width: 800px;
+				height: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+// Import - Font
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+// Root styles
+:root {
+	// Colours
+	--main-colour: #2b9287;
+	--bg-primary: #292929;
+	--bg-secondary: #2b9287;
+	--text-primary: #fff;
+	--text-secondary: #85828f;
+	--button-text: #fff;
+	--border-colour: rgba(146, 160, 186, 0.15);
+	--link-text: #fff;
+
+	// Spacing
+	--content-padding: 30px;
+
+	// Border
+	--border-radius: 15px;
+}
+
+// Mixins - To be reused
+@mixin heading {
+	font-family: 'Manrope', sans-serif !important;
+	font-size: 45px !important;
+	font-weight: 800 !important;
+	color: var(--text-primary);
+}
+
+@mixin sub-heading {
+	font-family: 'Manrope', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 800 !important;
+}
+
+@mixin paragraph {
+	font-family: 'Manrope', sans-serif !important;
+	font-size: 18px !important;
+	font-weight: 400 !important;
+	color: var(--text-primary);
+}
+
+@mixin link {
+	font-family: 'Manrope', sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	color: var(--link-text) !important;
+}
+
+@mixin button {
+	padding: 8px 20px;
+	border: 0;
+	background-color: var(--bg-primary);
+	color: var(--button-text);
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	font-size: 16px !important;
+}
+
+// General styling
+* {
+	margin: 0;
+
+	h1 {
+		@include heading;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@include sub-heading;
+	}
+
+	p,
+	span,
+	button {
+		@include paragraph;
+	}
+
+	a {
+		@include link;
+	}
+
+	button {
+		@include button;
+	}
+}
